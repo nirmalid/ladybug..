@@ -1,0 +1,500 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: black;
+  gap: 0.2rem; /* space between icon and text */
+}
+
+.logo img {
+  width: 32px;    /* size of the ladybug icon */
+  height: 32px;   
+}
+
+.searchbar{ 
+    background: white;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    box-shadow: 0 0 25px 0 black;
+}
+
+.searchbar:hover input{
+    width: 200px;
+    cursor: pointer;
+
+}
+
+.searchbar input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width:0px;
+    font-weight:500;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+
+.searchbar a li .fas{
+    color: purple;
+}
+
+/* Modal background */
+.modal {
+  display: none; /* Hidden initially */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: white;
+  margin: 8% auto;      /* Center vertically with some margin top */
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 350px;         /* Fixed width */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* Close button styling */
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Form styles for vertical stacking */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 12px 0 5px;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit button styling */
+form button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-options .forgot-password {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-options .forgot-password:hover {
+  text-decoration: underline;
+}
+
+.header-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-right .icon {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.header-right .icon:hover {
+  color: pink; 
+}
+
+/* Navigation bar styling */
+.nav-menu {
+  background: white;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Mega menu hidden by default */
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  width: 800px;
+  padding: 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  gap: 2rem;
+  z-index: 1000;
+}
+/* shows when hovered */
+
+.dropdown:hover .mega-menu {
+  display: flex;
+}
+
+/* Menu columns inside the mega menu */
+.menu-column {
+  flex: 1;
+}
+
+.menu-column h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+.menu-column a {
+  display: block;
+  margin: 0.3rem 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-menu a:hover {
+  border-bottom: 2px solid black;
+}
+
+.plusdropdown {
+  position: relative;
+}
+
+.plusdropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* just below the parent */
+  left: 0;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.plusdropdown-content a {
+  display: block;
+  padding: 8px 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.plusdropdown-content a:hover {
+  background-color: #eee;
+}
+
+/* Show dropdown on hover */
+.plusdropdown:hover .plusdropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-banner {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* optional: slightly rounded corners */
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.hero-banner img:hover {
+  transform: scale(1.02); /* subtle zoom on hover */
+}
+
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+  text-align: center;
+  max-width: 90%; 
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+.hero-text a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  background: #ffd600; /* bright yellow like Forever 21 */
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.hero-text a:hover {
+  background: #e0b800;
+}
+
+.section-gap {
+  height: 0.5rem;       
+  background: white;  
+}
+
+/* start of section1 */
+
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: lightgrey;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.section1-content {
+  display: flex;
+  flex-direction: column; /* stacks h1 & h4 vertically */
+  align-items: center;    /* centers them horizontally */
+}
+.section1 h1 {
+  font-size: 2rem; 
+  margin: 0;              
+}
+
+.section1 h2 ul {
+  align-items: center;
+  justify-content: center;  
+  position: relative;          
+}
+
+.shoe-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.shoe-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* makes the image circular */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.shoe-item img:hover {
+  transform: scale(1.1);
+}
+
+
+.section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: lightpink;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.section1 h2 {
+  font-size: 2rem;            
+}
+
+
+.site-footer {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.social-follow p {
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  margin-bottom: 25px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: black;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4081; /* pink-ish on hover */
+}
+
+.app-badges {
+  margin-bottom: 30px;
+}
+
+.app-badges a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.app-badges img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.footer-column h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #000;
+}

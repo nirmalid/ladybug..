@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> A Uinque Fashion Brand </title>
+            
+            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+
+        <body>
+
+            <header class="main-header">
+                <div class="header-left">
+                    <div class="logo"> LADYBUG <img src="images/lovebug.jpg" alt="Ladybug Icon"> </div>
+                </div>
+            
+        
+                <div class="searchbar">
+                        <input type="text" placeholder="Search" />
+                        <a href="">
+                            <li class = "fas fa-search"></li>
+                        </a>
+                </div>
+        
+
+                <div class="header-right">
+                    <a href="#" id="loginIcon" class="icon" aria-label="Login">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+
+                    <div id="loginmodal" class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+                        <div class="modal-content">
+                            <span class="close" aria-label="Close">&times;</span>
+                            <h2 id="loginTitle">Login</h2>
+
+                            <form>
+                            <label for="username">Username or Email</label>
+                            <input type="text" id="username" placeholder="Enter Username or email" required>
+
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter password" required>
+                            
+                            <div class="form-options">
+                                <label>
+                                    <input type="checkbox" id="rememberMe" />
+                                        Remember me
+                                    </label>
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                            </div>
+                            <button type="submit">Login</button>
+                            </form>
+                        </div>
+                    </div>
+
+  <a href="#" class="icon" aria-label="Favorites">
+    <i class="fa-solid fa-heart"></i>
+  </a>
+
+  <a href="#" class="icon cart-icon" aria-label="Shopping Cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+  </a>
+</div>
+
+        
+            </header>
+        
+        
+
+                <!-- NAVIGATION MENU -->
+                <nav class="nav-menu">
+                <ul>
+                    <!-- WOMEN Dropdown -->
+                    <li class="dropdown">
+                    <a href="#">WOMEN</a>
+                    <div class="mega-menu">
+                        <div class="menu-column">
+                        <h4>CLOTHING</h4>
+                        <a href="#">Best Sellers</a>
+                        <a href="#">New Arrivals</a>
+                        <a href="#">Tops</a>
+                        <a href="#">Dresses</a>
+                        </div>
+
+                        <div class="menu-column">
+                        <h4>ACCESSORIES</h4>
+                        <a href="#">Handbags</a>
+                        <a href="#">Luggage</a>
+                        <a href="#">Sunglasses</a>
+                        </div>
+
+                        <div class="menu-column">
+                        <h4>INTIMATES</h4>
+                        <a href="#">Bras & Bralettes</a>
+                        <a href="#">Panties & Thongs</a>
+                        <a href="#">Lingerie</a>
+                        <a href="#">Sleepwear & Pajamas</a>
+                        </div>
+                    </div>
+                    </li>
+                    <!-- END WOMEN Dropdown -->
+
+                    <!-- Other Menu Links -->
+                    <li class="plusdropdown">
+                        <a href="#">PLUS</a>
+                        <div class="plusdropdown-content">
+                            <a href="#">Best Sellers</a>
+                            <a href="#">New Arrivals</a>
+                        </div>
+                    </li>
+                    
+                    <li><a href="#">MEN</a></li>
+                    <li><a href="#">SHOES</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <!-- END Other Menu Links -->
+                </ul>
+                </nav>
+                <!--  END NAVIGATION MENU -->
+
+                
+               <!-- HERO BANNER WITH MULTIPLE TEXT LAYERS -->
+                <section class="hero-banner">
+                <img src="images/banner.avif" alt="Promotional Banner">
+                <div class="hero-text">
+                    <h1>Homely VIBES</h1>
+                    <p>Comfortable, Cozy & Sustainable</p>
+                    <a href="#">NEW ARRIVALS</a>
+                </div>
+                </section>
+                <!-- END HERO BANNER -->
+
+
+                <!--  WHITE GAP  -->
+                <div class="section-gap"></div>
+
+
+                <section class ="section1">
+                    <div class="section1-content">
+                        <h1> When Your Feet Lands On These </h1>
+                        <h4> All Your Worries Will Cease</h4> 
+                    </div>
+                </section>
+
+                <!-- SHOE GALLERY SECTION  -->
+                <section class="shoe-gallery">
+                <div class="shoe-item">
+                    <img src="images/shoe1.avif" alt="Shoe 1">
+                </div>
+                <div class="shoe-item">
+                    <img src="images/shoe2.avif" alt="Shoe 2">
+                </div>
+                <div class="shoe-item">
+                    <img src="images/shoe3.avif" alt="Shoe 3">
+                </div>
+                <div class="shoe-item">
+                    <img src="images/shoe4.avif" alt="Shoe 4">
+                </div>
+                <div class="shoe-item">
+                    <img src="images/shoe5.avif" alt="Shoe 5">
+                </div>
+                </section>
+                <!-- END SHOE GALLERY SECTION  -->
+
+
+                
+                <section class ="section2">
+                    <div class="section2-content">
+                        <h1> Shop happiness </h1>
+                    </div>
+                </section>
+
+
+
+        <script src="script.js"></script> 
+
+        </body>
+
+        <footer class="site-footer">
+  <div class="social-follow">
+    <p>Follow @ladybug</p>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+
+  <div class="app-badges">
+    <a href="#" aria-label="Download on the App Store">
+      <img src="images/apple.webp" alt="Download on the App Store" />
+    </a>
+    <a href="#" aria-label="Get it on Google Play">
+      <img src="images/google_play.avif" alt="Get it on Google Play" />
+    </a>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-column">
+      <h3>Customer Service</h3>
+      <ul>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Returns Center</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Returns Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</html>
